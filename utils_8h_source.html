@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>Otus homework print_ip: Исходный файл utils.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Otus homework print_ip
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Файлы</span></a></li>
+      <li><a href="globals.html"><span>Список&#160;членов&#160;всех&#160;файлов</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">utils.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="utils_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;type_traits&gt;</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;tuple&gt;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> _ = <span class="keywordtype">void</span>&gt;</div><div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="structis__container.html">   16</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structis__container.html">is_container</a> : std::false_type {};</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Ts&gt;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">struct </span>is_container_helper {};</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">struct </span><a class="code" href="structis__container.html">is_container</a>&lt;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        T,</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        std::conditional_t&lt;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            false,</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            is_container_helper&lt;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                typename T::value_type,</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                typename T::size_type,</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                typename T::allocator_type,</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                typename T::iterator,</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                typename T::const_iterator,</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                decltype(std::declval&lt;T&gt;().size()),</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                decltype(std::declval&lt;T&gt;().begin()),</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                decltype(std::declval&lt;T&gt;().end()),</div><div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="utils_8h.html#a7b6fa50260d0977759673788c372544d">   38</a></span>&#160;                decltype(std::declval&lt;T&gt;().cbegin()),</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                decltype(std::declval&lt;T&gt;().cend())</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                &gt;,</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            void</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            &gt;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        &gt; : <span class="keyword">public</span> std::true_type {};</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Tuple, std::<span class="keywordtype">size_t</span> First, std::<span class="keywordtype">size_t</span> Count&gt;</div><div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="structprint__tuple.html">   49</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structprint__tuple.html">print_tuple</a> {</div><div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="structprint__tuple.html#a908f2f017426df3fd9b3663f0bf8eb53">   50</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="structprint__tuple.html#a908f2f017426df3fd9b3663f0bf8eb53">print</a>(<span class="keyword">const</span> Tuple &amp;ip) {</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        std::cout &lt;&lt; (First ? <span class="stringliteral">&quot;.&quot;</span> : <span class="stringliteral">&quot;&quot;</span>) &lt;&lt; <span class="keywordtype">int</span>(std::get&lt;First&gt;(ip));</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="structprint__tuple.html#a908f2f017426df3fd9b3663f0bf8eb53">print_tuple&lt;Tuple, First + 1, Count&gt;::print</a>(ip);</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;};</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Tuple, std::<span class="keywordtype">size_t</span> Count&gt;</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">struct </span><a class="code" href="structprint__tuple.html">print_tuple</a>&lt;Tuple, Count, Count&gt; {</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> print(<span class="keyword">const</span> Tuple &amp;) {</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        std::cout &lt;&lt; std::endl;</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;};</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span>...Args&gt;</div><div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="structis__all__of.html">   70</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structis__all__of.html">is_all_of</a>;</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keyword">struct </span><a class="code" href="structis__all__of.html">is_all_of</a>&lt;T&gt; : std::true_type {};</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span>...Args&gt;</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keyword">struct </span><a class="code" href="structis__all__of.html">is_all_of</a>&lt;T, T, Args...&gt; : <a class="code" href="structis__all__of.html">is_all_of</a>&lt;T, Args...&gt; {};</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> U, <span class="keyword">typename</span>...Args&gt;</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keyword">struct </span><a class="code" href="structis__all__of.html">is_all_of</a>&lt;T, U, Args...&gt; : std::false_type {};</div><div class="ttc" id="structprint__tuple_html"><div class="ttname"><a href="structprint__tuple.html">print_tuple</a></div><div class="ttdoc">Вспомогательная функция печати ip-адреса из std::tuple. </div><div class="ttdef"><b>Definition:</b> utils.h:49</div></div>
+<div class="ttc" id="structis__all__of_html"><div class="ttname"><a href="structis__all__of.html">is_all_of</a></div><div class="ttdoc">Вспомогательная функция по определению различающихся типов </div><div class="ttdef"><b>Definition:</b> utils.h:70</div></div>
+<div class="ttc" id="structis__container_html"><div class="ttname"><a href="structis__container.html">is_container</a></div><div class="ttdoc">Функция определения контейнера </div><div class="ttdef"><b>Definition:</b> utils.h:16</div></div>
+<div class="ttc" id="structprint__tuple_html_a908f2f017426df3fd9b3663f0bf8eb53"><div class="ttname"><a href="structprint__tuple.html#a908f2f017426df3fd9b3663f0bf8eb53">print_tuple::print</a></div><div class="ttdeci">static void print(const Tuple &amp;ip)</div><div class="ttdef"><b>Definition:</b> utils.h:50</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>
