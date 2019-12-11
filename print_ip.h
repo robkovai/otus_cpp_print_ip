@@ -21,8 +21,8 @@
  * @param ip - ip-адрес в виде целочисленного значения
  */
 template <typename T>
-std::enable_if_t<std::is_integral<T>::value> print_ip(T ip) {
-    auto bytes = reinterpret_cast<unsigned char*>(&ip) + sizeof(T) - 1;
+std::enable_if_t<std::is_integral<T>::value> print_ip(const T &ip) {
+    auto bytes = reinterpret_cast<const unsigned char*>(&ip) + sizeof(T) - 1;
     std::cout << int(*bytes);
     for (auto i = sizeof(T); i > 1; --i)
         std::cout << "." << int(*--bytes);
